@@ -1,0 +1,42 @@
+FUNCTION Dot product(v1,v2) : INTEGER
+VAR
+    v1:=array
+    v2:=array
+    n:=INTEGER
+    prod:=INTEGER=0
+BEGIN
+ IF (v1.length<>v2.length) THEN
+    write("error")
+    RETURN NAN
+ END_IF
+    FOR i FROM 0 TO n-1 STEP 1  DO
+      write("v1[",i,"]")
+      read(v1[i])
+    END_FOR
+    FOR j FROM 0 TO n-1 STEP 1  DO
+      write("v2[",j,"]")
+      read(v2[j])
+    END_FOR
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        prod:=v1[i]*v2[j]
+        result:=result+prod
+    END_FOR
+    RETURN INTEGER ;
+END
+PROCEDURE previous question()
+BEGIN
+    IF (result==0) THEN
+        write("the two vectors are orthogonal ")
+    ELSE
+        write("the two vectors aren't orthogonal ")
+    END_IF
+END
+ALGORITHM Dot product
+VAR
+    result:INTEGER=0
+    v1:=array
+    v2:=array
+BEGIN
+    Dot product(v1,v2)
+    previous question(result)
+END
