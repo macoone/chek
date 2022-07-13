@@ -1,0 +1,26 @@
+PROCEDURE tri (T1)
+VAR
+  T1:=ARRAY_OF n INTEGER
+  n:=INTEGER
+  max:=INTEGER=0
+BEGIN
+    write("give the number of cards:")
+    read(n)
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        write("T1[",i,"]")
+        read(T1[i])
+    END_FOR
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        IF (T1[i]>T1[i+1]) THEN
+            max=T1[i]
+            T1[i]=T1[i+1]
+            T1[i+1]=max
+        END_IF        
+    END_FOR
+END
+ALGORITHM card game
+VAR
+  T1:=ARRAY_OF n INTEGER    
+BEGIN
+    tri(T1)
+END
